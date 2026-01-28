@@ -1,0 +1,23 @@
+[project]
+name = "officegraph"
+version = "0.1.0"
+description = "Dunder Mifflin Chain of Command Management - Organizational graph builder with Streamlit UI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.49.1",
+    "networkx>=3.4.2",
+    "sqlalchemy>=2.0.42",
+    "psycopg2-binary>=2.9.10",
+    "python-dotenv>=1.1.1",
+    "pydantic>=2.11.7",
+    "regex>=2024.11.6",
+    "pytest>=9.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "pytest-mock>=3.15.1",
+]
