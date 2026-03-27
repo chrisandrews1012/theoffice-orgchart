@@ -72,7 +72,6 @@ Follow these instructions to get a copy of the project up and running on your lo
 1.  Ensure you have a local PostgreSQL instance running. Create your `.env` file by copying the template (`cp template.env .env`).
 
     > **Important:** For this setup, you **must** update the `.env` file with the actual connection details for your existing local database instance. The application will use these values to connect to your server.
-    > **Important:** For this setup, you **must** update the `.env` file with the actual connection details for your existing local database instance. The application will use these values to connect to your server. You will also need to set `DB_HOST` to `localhost`.
 2.  Install the dependencies using `uv`:
     ```bash
     uv sync
