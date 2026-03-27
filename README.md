@@ -48,12 +48,12 @@ Follow these instructions to get a copy of the project up and running on your lo
 
     > **Note:** Since the Docker environment creates a new, self-contained database for you, you can use any values you wish for these credentials. They will be used to initialize the new database instance inside the container.
 
-    *   `PG_USER`: The superuser for the PostgreSQL database (e.g., `postgres`).
+    *   `PG_USER`: The superuser for the PostgreSQL database.
     *   `PG_PASSWORD`: The password for the PostgreSQL superuser.
-    *   `PG_DATABASE`: The name for the database to be created (e.g., `office_db`).
-    *   `PG_PORT`: The external port to map to the PostgreSQL container's port 5432 (e.g., `5432`).
-    *   `DB_HOST`: The hostname of the database server (e.g., `db` when using Docker Compose, or `localhost` for local development).
-    *   `DB_USER`: The username for the non-superuser role that the application will use to connect (e.g., `app_user`).
+    *   `PG_DATABASE`: The name for the database to be created.
+    *   `PG_PORT`: The external port to map to the PostgreSQL container's port 5432.
+    *   `DB_HOST`: The hostname of the database server.
+    *   `DB_USER`: The username for the non-superuser role that the application will use to connect.
     *   `DB_USER_PW`: The password for the application user.
 3.  Build and start the application and database services:
     ```bash
