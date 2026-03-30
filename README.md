@@ -14,7 +14,7 @@ This project aims to highlight experience across several key technologies and co
 
 *   **Object-Relational Mapping (ORM)**: Uses **SQLAlchemy** to define hierarchical data models (`SQLEmployee`, `SQLManager`, `SQLExecutive`), handle complex queries (e.g., recursive dependencies and `UNION`s), and manage secure, reusable database sessions.
 *   **Database Management**: Powered by **PostgreSQL** to robustly store and query the corporate reporting structure.
-*   **Containerization**: Fully containerized using **Docker** (and Docker Compose) to seamlessly orchestrate the web application and the PostgreSQL database environments.
+*   **Containerization**: Fully containerized using **Docker** (and Docker Compose) to orchestrate the web application and the PostgreSQL database environments seamlessly.
 *   **Graph Theory & Traversal**: Leverages **NetworkX** to dynamically build directed graphs (`DiGraph`) from SQL queries, enabling organizational traversals and visual node mapping.
 *   **Interactive UI**: Built with **Streamlit** to create a responsive, multi-page data application without writing boilerplate HTML/JS.
 
@@ -26,7 +26,7 @@ This project aims to highlight experience across several key technologies and co
 
 ## Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+Follow these instructions to get the project running on your local machine.
 
 ### Prerequisites
 
@@ -37,10 +37,14 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/theoffice-orgchart.git
+    git clone https://github.com/your-username/the-office-org-chart.git
     cd theoffice-orgchart
     ```
-2.  Create a `.env` file in the project root to securely store your database configuration. This file is ignored by Git but is essential for the application to connect to the database. You can get started by copying the template:
+2. Sync the dependencies:
+    ```bash
+    uv sync
+    ```
+3.  Create a `.env` file in the project root directory to securely store your database configuration. This file is ignored by Git but is essential for the application to connect to the database. You can get started by copying the template:
     ```bash
     cp template.env .env
     ```
@@ -54,24 +58,24 @@ Follow these instructions to get a copy of the project up and running on your lo
     *   `DB_USER`: The username for the non-superuser role that the application will use to connect.
     *   `DB_USER_PW`: The password for the application user.
 
-3.  Start the PostgreSQL database container in the background:
+4.  Start the PostgreSQL database container in the background:
     ```bash
     docker compose up -d
     ```
     
     > **Work in Progress:** The Docker Compose network setup is currently being fixed. For now, the application does not start automatically alongside the database.
 
-4.  In a separate terminal, manually populate the database by running the build script:
+5.  In a separate terminal, manually populate the database by running the build script:
     ```bash
     uv run python build.py rebuild
     ```
 
-5.  Now, start the Streamlit web application:
+6.  Now, start the Streamlit web application:
     ```bash
     uv run streamlit run app.py
     ```
 
-6.  The application will open in your default browser at `http://localhost:8501`.
+7.  The application will open in your default browser at `http://localhost:8501`.
 
 ## License
 
